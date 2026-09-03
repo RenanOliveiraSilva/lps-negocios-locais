@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { TrustBar } from "@/components/TrustBar";
 import { Categories } from "@/components/Categories";
 import { Highlights } from "@/components/Highlights";
+import { Testimonials } from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <TrustBar />
         <Categories />
         <Highlights />
+        <Testimonials />
       </main>
     </>
   );
