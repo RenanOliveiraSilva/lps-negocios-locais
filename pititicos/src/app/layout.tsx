@@ -40,6 +40,13 @@ export const metadata: Metadata = {
     address: true,
     telephone: true,
   },
+  icons: {
+    icon: [
+      { url: "/logo.png", type: "image/png" },
+    ],
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
   alternates: {
     canonical: "/",
   },
