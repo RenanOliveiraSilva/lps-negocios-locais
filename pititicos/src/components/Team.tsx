@@ -9,7 +9,7 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { Heart, Sparkles, Shirt } from "lucide-react";
+import { Heart, Shirt, Palette } from "lucide-react";
 import { WhatsAppIcon } from "./ui";
 import { waLink } from "@/lib/site";
 
@@ -23,7 +23,7 @@ const features = [
     text: "Escolhem as peças a dedo",
   },
   {
-    icon: Sparkles,
+    icon: Palette,
     text: "Ajudam você a montar o look ideal",
   },
 ];

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { BUSINESS } from "@/lib/site";
+import { FAQ_ITEMS } from "@/data/faq";
 
 export const viewport: Viewport = {
   themeColor: "#6F397D",
@@ -85,6 +86,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
   other: {
     "geo.region": "BR-SP",
     "geo.placename": "São Joaquim da Barra",
@@ -93,81 +97,119 @@ export const metadata: Metadata = {
   },
 };
 
-// Schema.org Structured Data (JSON-LD) for Local Business & Google Search Rich Snippets
-const jsonLd = {
+// Schema.org Structured Data (JSON-LD) for Local Business, WebSite & FAQ Rich Snippets
+const structuredData = {
   "@context": "https://schema.org",
-  "@type": ["ClothingStore", "LocalBusiness"],
-  name: "Pititicos Moda Infantil",
-  image: "https://pititicosmodainfantil.com.br/place.png",
-  logo: "https://pititicosmodainfantil.com.br/logo.png",
-  description:
-    "Loja de moda infantil em São Joaquim da Barra – SP com roupas, calçados e acessórios para bebês, meninas e meninos de 0 a 16 anos.",
-  telephone: "+5516999984506",
-  url: "https://pititicosmodainfantil.com.br",
-  priceRange: "$$",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Centro",
-    addressLocality: "São Joaquim da Barra",
-    addressRegion: "SP",
-    postalCode: "14600-000",
-    addressCountry: "BR",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: -20.5828,
-    longitude: -47.8594,
-  },
-  openingHoursSpecification: [
+  "@graph": [
     {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "08:30",
-      closes: "18:00",
+      "@type": ["ClothingStore", "LocalBusiness", "Store"],
+      "@id": "https://pititicosmodainfantil.com.br/#store",
+      name: "Pititicos Moda Infantil",
+      alternateName: ["Pititicos", "Pititicos Moda Infantil São Joaquim da Barra"],
+      image: "https://pititicosmodainfantil.com.br/place.png",
+      logo: "https://pititicosmodainfantil.com.br/logo.png",
+      description:
+        "Loja de moda infantil completa em São Joaquim da Barra – SP. Vestidos, conjuntos para meninos e meninas, roupas para bebês, calçados e acessórios de 0 a 16 anos.",
+      telephone: "+5516999984506",
+      url: "https://pititicosmodainfantil.com.br",
+      hasMap: "https://www.google.com/maps/dir/?api=1&destination=Pititicos+São+Joaquim+da+Barra",
+      priceRange: "$$",
+      currenciesAccepted: "BRL",
+      paymentAccepted: "Dinheiro, Cartão de Crédito, Cartão de Débito, Pix",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Centro",
+        addressLocality: "São Joaquim da Barra",
+        addressRegion: "SP",
+        postalCode: "14600-000",
+        addressCountry: "BR",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: -20.5828,
+        longitude: -47.8594,
+      },
+      areaServed: [
+        { "@type": "City", "name": "São Joaquim da Barra" },
+        { "@type": "City", "name": "Guará" },
+        { "@type": "City", "name": "Ipuã" },
+        { "@type": "City", "name": "Orlândia" },
+        { "@type": "City", "name": "Morro Agudo" },
+      ],
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "08:30",
+          closes: "18:00",
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: "Saturday",
+          opens: "08:30",
+          closes: "13:00",
+        },
+      ],
+      sameAs: [
+        "https://instagram.com/pititicosloja",
+        "https://www.google.com/maps/search/?api=1&query=Pititicos+São+Joaquim+da+Barra",
+      ],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "5.0",
+        reviewCount: "35",
+        bestRating: "5",
+        worstRating: "1",
+      },
+      department: [
+        {
+          "@type": "Department",
+          name: "Moda Meninas",
+          description: "Vestidos, conjuntos e moda feminina infantil",
+        },
+        {
+          "@type": "Department",
+          name: "Moda Meninos",
+          description: "Conjuntos, camisetas, bermudas e calças masculinas",
+        },
+        {
+          "@type": "Department",
+          name: "Bebês & Primeiros Passos",
+          description: "Bodies, macacões, conjuntos e enxoval bebê",
+        },
+        {
+          "@type": "Department",
+          name: "Calçados Infantis",
+          description: "Tênis, sandálias e sapatos confortáveis",
+        },
+        {
+          "@type": "Department",
+          name: "Acessórios",
+          description: "Laços, meias, bolsas e detalhes para completar o look",
+        },
+      ],
     },
     {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Saturday",
-      opens: "08:30",
-      closes: "13:00",
-    },
-  ],
-  sameAs: [
-    "https://instagram.com/pititicosloja",
-    "https://www.google.com/maps/search/?api=1&query=Pititicos+São+Joaquim+da+Barra",
-  ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "35",
-    bestRating: "5",
-    worstRating: "1",
-  },
-  department: [
-    {
-      "@type": "Department",
-      name: "Moda Meninas",
-      description: "Vestidos, conjuntos e moda feminina infantil",
+      "@type": "WebSite",
+      "@id": "https://pititicosmodainfantil.com.br/#website",
+      name: "Pititicos Moda Infantil",
+      url: "https://pititicosmodainfantil.com.br",
+      inLanguage: "pt-BR",
+      publisher: {
+        "@id": "https://pititicosmodainfantil.com.br/#store",
+      },
     },
     {
-      "@type": "Department",
-      name: "Moda Meninos",
-      description: "Conjuntos, camisetas, bermudas e calças masculinas",
-    },
-    {
-      "@type": "Department",
-      name: "Bebês & Primeiros Passos",
-      description: "Bodies, macacões, conjuntos e enxoval bebê",
-    },
-    {
-      "@type": "Department",
-      name: "Calçados Infantis",
-      description: "Tênis, sandálias e sapatos confortáveis",
-    },
-    {
-      "@type": "Department",
-      name: "Acessórios",
-      description: "Laços, meias, bolsas e detalhes para completar o look",
+      "@type": "FAQPage",
+      "@id": "https://pititicosmodainfantil.com.br/#faq",
+      mainEntity: FAQ_ITEMS.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
     },
   ],
 };
@@ -178,15 +220,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="scroll-smooth">
+    <html lang="pt-BR" className="scroll-smooth" suppressHydrationWarning>
       <head>
         {/* JSON-LD Rich Snippet for Google Search Knowledge Graph & Local SEO */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased" suppressHydrationWarning>
+        {children}
+      </body>
     </html>
   );
 }

@@ -49,9 +49,10 @@ export function Header() {
               <span className="relative w-9 h-9 sm:w-[42px] sm:h-[42px] rounded-full bg-white shadow-[0_0_0_1px_rgba(82,45,94,0.12)] overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform shrink-0">
                 <Image
                   src="/logo.png"
-                  alt="Pititicos"
+                  alt="Pititicos Moda Infantil - Loja em São Joaquim da Barra"
                   fill
-                  className="object-cover scale-[1.36] object-center"
+                  sizes="(max-width: 640px) 36px, 42px"
+                  className="object-contain"
                   priority
                 />
               </span>
@@ -133,9 +134,10 @@ export function Header() {
                     <span className="relative w-9 h-9 rounded-full bg-white shadow-[0_0_0_1px_rgba(82,45,94,0.12)] overflow-hidden flex items-center justify-center shrink-0">
                       <Image
                         src="/logo.png"
-                        alt="Pititicos"
+                        alt="Pititicos Moda Infantil - Loja em São Joaquim da Barra"
                         fill
-                        className="object-cover scale-[1.36] object-center"
+                        sizes="36px"
+                        className="object-contain"
                       />
                     </span>
                     <div className="flex flex-col">

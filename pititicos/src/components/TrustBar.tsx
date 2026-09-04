@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles, Heart, Store, MessageCircle } from "lucide-react";
+import { Shirt, Heart, Store, MessageCircle } from "lucide-react";
 
 const trustItems = [
   {
-    icon: Sparkles,
+    icon: Shirt,
     text: "Moda infantil",
   },
   {

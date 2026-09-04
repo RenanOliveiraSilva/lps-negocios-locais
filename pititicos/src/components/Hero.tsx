@@ -8,7 +8,7 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { ArrowRight, MapPin, Sparkles } from "lucide-react";
+import { ArrowRight, MapPin } from "lucide-react";
 import Image from "next/image";
 import { PrimaryButton, GhostButton, WhatsAppIcon } from "./ui";
 import { waLink, WA_MESSAGES, BUSINESS, REAL_PHOTOS } from "@/lib/site";
@@ -66,9 +66,9 @@ export function Hero() {
             {/* Eyebrow badge */}
             <motion.span
               {...rise(0.05)}
-              className="inline-flex items-center gap-2 rounded-full border border-[var(--brand-border)] bg-white/80 px-3.5 py-1 text-xs sm:text-[13px] font-semibold text-purple-deep backdrop-blur shadow-xs"
+              className="inline-flex items-center gap-1.5 rounded-full border border-[var(--brand-border)] bg-white/80 px-3.5 py-1 text-xs sm:text-[13px] font-semibold text-purple-deep backdrop-blur shadow-xs"
             >
-              <Sparkles size={14} className="text-apricot shrink-0" />
+              <MapPin size={13} className="text-purple shrink-0" />
               <span>Moda infantil em São Joaquim da Barra</span>
             </motion.span>
 
@@ -80,6 +80,7 @@ export function Hero() {
               Pequenos looks.
               <br />
               <span className="text-purple">Grandes momentos.</span>
+              <span className="sr-only"> — Pititicos Moda Infantil em São Joaquim da Barra</span>
             </motion.h1>
 
             {/* Paragraph */}
@@ -87,8 +88,7 @@ export function Hero() {
               {...rise(0.2)}
               className="mt-3 sm:mt-4 max-w-md text-[14px] sm:text-[15px] xl:text-[16px] leading-relaxed text-muted-fg"
             >
-              Roupas escolhidas com carinho para acompanhar cada descoberta, cada brincadeira e cada momento especial
-              dos pequenos.
+              Moda infantil de 0 a 16 anos em São Joaquim da Barra – SP. Roupas, calçados e acessórios selecionados com carinho para acompanhar cada descoberta e momento especial.
             </motion.p>
 
             {/* Action buttons */}

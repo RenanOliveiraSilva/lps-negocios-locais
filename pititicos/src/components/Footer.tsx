@@ -41,9 +41,10 @@ export function Footer() {
               <span className="relative w-10 h-10 rounded-full bg-white shadow-[0_0_0_1px_rgba(82,45,94,0.12)] overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform shrink-0">
                 <Image
                   src="/logo.png"
-                  alt="Pititicos"
+                  alt="Pititicos Moda Infantil - Loja em São Joaquim da Barra"
                   fill
-                  className="object-cover scale-[1.36] object-center"
+                  sizes="40px"
+                  className="object-contain"
                 />
               </span>
               <span className="font-display font-extrabold text-[19px] leading-tight tracking-[-0.025em] text-purple-deep">
@@ -91,6 +92,14 @@ export function Footer() {
                   className="font-body text-sm text-muted-fg hover:text-purple transition-colors"
                 >
                   Avaliações
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#duvidas"
+                  className="font-body text-sm text-muted-fg hover:text-purple transition-colors"
+                >
+                  Dúvidas Frequentes
                 </a>
               </li>
             </ul>
