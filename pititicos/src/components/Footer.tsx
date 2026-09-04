@@ -144,10 +144,10 @@ export function Footer() {
             <div className="mt-4 flex flex-col gap-2 font-body text-sm text-muted-fg leading-relaxed">
               <span>São Joaquim da Barra – SP</span>
               <a
-                href="tel:1637282233"
+                href={`tel:${BUSINESS.phone}`}
                 className="hover:text-purple transition-colors"
               >
-                (16) 3728-2233
+                {BUSINESS.phoneDisplay}
               </a>
             </div>
 

@@ -93,7 +93,7 @@ export function Categories() {
               <div className="absolute inset-0 overflow-hidden">
                 <Image
                   src={cat.image}
-                  alt={`Categoria ${cat.name}`}
+                  alt={`Moda Infantil Pititicos - Categoria ${cat.name} em São Joaquim da Barra`}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                   sizes={cat.span2 ? "(max-width: 768px) 100vw, 1200px" : "(max-width: 768px) 50vw, 600px"}

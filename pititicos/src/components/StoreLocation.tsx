@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { MapPin, Phone, Navigation, ExternalLink } from "lucide-react";
 import { PrimaryButton, GhostButton, WhatsAppIcon } from "./ui";
-import { waLink } from "@/lib/site";
+import { waLink, BUSINESS } from "@/lib/site";
 
 const GOOGLE_MAPS_DIRECTIONS_URL =
   "https://www.google.com/maps/dir/?api=1&destination=Pititicos+São+Joaquim+da+Barra";
@@ -59,10 +59,10 @@ export function StoreLocation() {
                 </div>
                 <div>
                   <h3 className="font-display font-bold text-[16px] text-ink leading-tight">
-                    (16) 3728-2233
+                    {BUSINESS.phoneDisplay}
                   </h3>
                   <p className="font-body text-[14px] text-muted-fg mt-0.5">
-                    Atendimento na loja física
+                    WhatsApp e Atendimento na loja
                   </p>
                 </div>
               </div>

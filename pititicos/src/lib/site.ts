@@ -1,7 +1,8 @@
 export const BUSINESS = {
   name: "Pititicos",
   city: "São Joaquim da Barra – SP",
-  phone: "5516999999999", // Atualizar com número oficial
+  phone: "5516999984506",
+  phoneDisplay: "(16) 99998-4506",
   instagram: "@pititicosloja",
   address: "São Joaquim da Barra, SP",
 };

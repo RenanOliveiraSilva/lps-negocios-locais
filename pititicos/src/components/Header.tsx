@@ -199,7 +199,7 @@ export function Header() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Phone size={14} className="text-purple shrink-0" />
-                    <span>(16) 3728-2233</span>
+                    <span>{BUSINESS.phoneDisplay}</span>
                   </div>
                 </div>
               </div>

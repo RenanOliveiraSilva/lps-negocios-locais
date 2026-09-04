@@ -94,7 +94,7 @@ export function Highlights() {
               <div className="relative aspect-[4/5] w-full rounded-2xl sm:rounded-[24px] overflow-hidden bg-lavender shadow-[0_0_0_1px_rgba(82,45,94,0.08)] group-hover:shadow-[0_16px_36px_-12px_rgba(81,36,94,0.25)] transition-all duration-300">
                 <Image
                   src={prod.image}
-                  alt={prod.title}
+                  alt={`${prod.title} - Moda Infantil na Pititicos São Joaquim da Barra`}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 300px"
