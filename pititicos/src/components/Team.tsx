@@ -58,7 +58,7 @@ export function Team() {
   return (
     <section id="sobre" className="relative py-16 sm:py-20 lg:py-28 bg-lavender-soft overflow-hidden">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] items-center gap-12 lg:gap-16 xl:gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] items-center gap-12 lg:gap-16 xl:gap-20">
 
           {/* ── Left Column: Team Showcase with 3D Tilt ── */}
           <div className="relative w-full max-w-[580px] lg:max-w-none mx-auto [perspective:1400px]">
@@ -89,16 +89,17 @@ export function Team() {
 
               {/* Main Team Image Frame */}
               <div
-                className="relative w-full rounded-2xl sm:rounded-[32px] bg-purple-deep overflow-hidden shadow-[0px_40px_80px_-35px_rgba(81,36,94,0.45)] ring-1 ring-black/5"
+                className="relative w-full max-w-[490px] mx-auto rounded-2xl sm:rounded-[32px] bg-purple-deep overflow-hidden shadow-[0px_40px_80px_-35px_rgba(81,36,94,0.45)] ring-1 ring-black/5"
                 style={{ transform: "translateZ(25px)" }}
               >
-                <div className="relative aspect-[4/3] w-full overflow-hidden">
+                <div className="relative aspect-[4/5] sm:aspect-[4/4.8] w-full overflow-hidden">
                   <Image
-                    src="/team-pititicos.png"
-                    alt="Equipe da Pititicos reunida na loja em São Joaquim da Barra"
+                    src="/team-v2.png"
+                    alt="Equipe da Pititicos na loja em São Joaquim da Barra"
                     fill
-                    className="object-cover object-center"
-                    sizes="(max-width: 1024px) 100vw, 645px"
+                    className="object-cover object-top"
+                    sizes="(max-width: 1024px) 100vw, 520px"
+                    priority
                   />
                 </div>
 

@@ -38,13 +38,12 @@ export function Footer() {
           {/* ── Column 1: Brand & Bio ── */}
           <div className="flex flex-col items-start">
             <a href="#" className="flex items-center gap-2.5 group">
-              <span className="relative w-10 h-10 rounded-full bg-white shadow-[0_0_0_1px_rgba(82,45,94,0.1)] overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform">
+              <span className="relative w-10 h-10 rounded-full bg-white shadow-[0_0_0_1px_rgba(82,45,94,0.12)] overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform shrink-0">
                 <Image
                   src="/logo.png"
                   alt="Pititicos"
-                  width={57}
-                  height={59}
-                  className="object-cover scale-[1.35]"
+                  fill
+                  className="object-cover scale-[1.36] object-center"
                 />
               </span>
               <span className="font-display font-extrabold text-[19px] leading-tight tracking-[-0.025em] text-purple-deep">

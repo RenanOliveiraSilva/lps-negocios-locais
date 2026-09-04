@@ -46,13 +46,12 @@ export function Header() {
           <div className="flex items-center justify-between w-full max-w-[1240px] px-4 sm:px-6 lg:px-8 h-14 sm:h-15">
             {/* Logo */}
             <a href="#" className="flex items-center gap-2.5 group">
-              <span className="relative w-9 h-9 sm:w-[42px] sm:h-[42px] rounded-full bg-white shadow-[0_0_0_1px_rgba(82,45,94,0.1)] overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform">
+              <span className="relative w-9 h-9 sm:w-[42px] sm:h-[42px] rounded-full bg-white shadow-[0_0_0_1px_rgba(82,45,94,0.12)] overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform shrink-0">
                 <Image
                   src="/logo.png"
                   alt="Pititicos"
-                  width={57}
-                  height={59}
-                  className="object-cover scale-[1.35]"
+                  fill
+                  className="object-cover scale-[1.36] object-center"
                   priority
                 />
               </span>
@@ -131,13 +130,12 @@ export function Header() {
               <div>
                 <div className="flex items-center justify-between p-5 border-b border-[var(--brand-border)] bg-lavender-soft/60">
                   <div className="flex items-center gap-2.5">
-                    <span className="relative w-9 h-9 rounded-full bg-white shadow-[0_0_0_1px_rgba(82,45,94,0.1)] overflow-hidden flex items-center justify-center">
+                    <span className="relative w-9 h-9 rounded-full bg-white shadow-[0_0_0_1px_rgba(82,45,94,0.12)] overflow-hidden flex items-center justify-center shrink-0">
                       <Image
                         src="/logo.png"
                         alt="Pititicos"
-                        width={50}
-                        height={50}
-                        className="object-cover scale-[1.35]"
+                        fill
+                        className="object-cover scale-[1.36] object-center"
                       />
                     </span>
                     <div className="flex flex-col">
