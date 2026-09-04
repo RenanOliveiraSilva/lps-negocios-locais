@@ -5,6 +5,7 @@ import { Categories } from "@/components/Categories";
 import { Highlights } from "@/components/Highlights";
 import { Team } from "@/components/Team";
 import { Testimonials } from "@/components/Testimonials";
+import { StoreLocation } from "@/components/StoreLocation";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Highlights />
         <Team />
         <Testimonials />
+        <StoreLocation />
       </main>
     </>
   );
